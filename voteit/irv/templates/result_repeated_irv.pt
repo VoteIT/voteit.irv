@@ -1,0 +1,109 @@
+<tal:main xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="voteit.irv">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4 class="modal-title"
+    i18n:translate="">
+    Results of
+    <tal:ts replace="context.title" i18n:name="title" />
+  </h4>
+</div>
+<div class="modal-body"><div data-flash-slot="modal"></div>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    <tal:ts i18n:translate="repeated_irv_result_explanation">
+    Repeated IRV is designed to achieve a ranked non-proportional election result, where every
+    poropsal is supported by a majority of the voters. Votes from excluded proposals are
+    transferred according to the ballots until one candidate has a majority. This is repeated
+    until no more winners can be decided.</tal:ts>
+</div>
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th i18n:translate="">Approved</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr tal:repeat="prop winners" class="success">
+            <td tal:content="repeat.prop.number"></td>
+            <td>${prop.title} <span class="badge">#${prop.aid}</span></td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th i18n:translate="">Denied</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr tal:repeat="prop losers" class="warning">
+            <td>&nbsp;</td>
+            <td>${prop.title} <span class="badge">#${prop.aid}</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<div tal:condition="context.poll_result['randomized']" class="modal-body bg-danger"
+     i18n:translate="stv_tied_description">
+    Randomization was used to resolve ties.
+</div>
+<div tal:condition="not context.poll_result['complete']" class="modal-body bg-danger"
+     i18n:translate="stv_incomplete_description">
+    Result is incomplete. Not enough proposals are supported by a majority.
+</div>
+
+<div class="modal-body">
+    <p class="text-right">
+        <a class="btn btn-default btn-xs" data-toggle="collapse"
+           href="#prop-details"
+           aria-expanded="false"
+           aria-controls="prop-details">
+          <span class="glyphicon glyphicon-info-sign"></span>
+          <tal:ts i18n:translate="">Detailed result</tal:ts>
+        </a>
+    </p>
+    <div class="collapse" id="prop-details">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><tal:ts i18n:translate="">Round</tal:ts></th>
+                    <th><tal:ts i18n:translate="">Result</tal:ts></th>
+                    <th><tal:ts i18n:translate="">Method</tal:ts></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tal:repeat="round rounds"
+                    tal:attributes="class 'table-success' if round.status == 'Elected' else 'table-danger'">
+                    <th scope="row" tal:content="repeat.round.number"></th>
+                    <td><tal:ts i18n:translate="">${round.status}</tal:ts> <span tal:repeat="proposal round.selected">#${proposal.aid} </span></td>
+                    <td><tal:ts i18n:translate="">${round.method}</tal:ts></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><tal:ts i18n:translate="">Complete result</tal:ts></td>
+                    <td>
+                        <tal:ts condition="context.poll_result['complete']|False" i18n:translate="">Yes</tal:ts>
+                        <tal:ts condition="not context.poll_result['complete']|True" i18n:translate="">No</tal:ts>
+                    </td>
+                </tr>
+                <tr>
+                    <td><tal:ts i18n:translate="">Random in tiebreak</tal:ts></td>
+                    <td>
+                        <tal:ts condition="context.poll_result['randomized']|False" i18n:translate="">Yes</tal:ts>
+                        <tal:ts condition="not context.poll_result['randomized']|True" i18n:translate="">No</tal:ts>
+                    </td>
+                </tr>
+                <tr>
+                    <td><tal:ts i18n:translate="">Quota (votes to be elected)</tal:ts></td>
+                    <td>${context.poll_result['quota']}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</tal:main>
