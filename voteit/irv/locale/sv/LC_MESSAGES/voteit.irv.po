@@ -1,12 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-16 15:35+0000\n"
+"PO-Revision-Date: 2018-03-16 15:58+0000\n"
+"Last-Translator: Weblate Admin <admin@example.com>\n"
+"Language-Team: Swedish <http://example.com/projects/voteit/voteit-irv/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.16\n"
+
 #: voteit/irv/models.py:14
 msgid "Instant-runoff voting"
-msgstr ""
+msgstr "IRV"
 
 #. Default: Ranked poll with single winner. Voters rank proposals by order of
 #. preference. First proposal with majority wins.
 #: voteit/irv/models.py:15
 msgid "moderator_description_irv"
 msgstr ""
+"Rangordnad omröstning med en vinnare. Röstaren rangordnar de förslag hen "
+"vill rösta på. Det första förslaget att uppnå majoritet vinner."
 
 #. Default: Rank proposals by order of preference. Your vote will be
 #. transferred according to your list as proposals are excluded. First proposal
@@ -14,16 +31,20 @@ msgstr ""
 #: voteit/irv/models.py:19
 msgid "voter_description_irv"
 msgstr ""
+"Rangordna förslagen i den ordning du föredrar dem. Om det förslag du röstat "
+"på utesluts flyttas din röst över enligt din rangordning."
 
 #: voteit/irv/models.py:35
 msgid "Repeated IRV"
-msgstr ""
+msgstr "Upprepad IRV"
 
 #. Default: Non-proportional ranked poll with multiple winners. WARNING: Result
 #. is easily manipulated by a group of voters.
 #: voteit/irv/models.py:36
 msgid "moderator_description_repeated_irv"
 msgstr ""
+"Icke-proportionerlig rangordnad omröstning med flera vinnare. VARNING: "
+"Resultatet kan lätt manipuleras av en grupp röstande."
 
 #. Default: Rank proposals by order of preference. Your vote will be
 #. transferred according to your list as proposals are excluded. Winners is
@@ -31,34 +52,38 @@ msgstr ""
 #: voteit/irv/models.py:39
 msgid "voter_description_repeated_irv"
 msgstr ""
+"Rangordna förslagen i den ordning du föredrar dem. Om det förslag du röstat "
+"på utesluts eller får ett överskott av röster flyttas din röst över enligt "
+"din rangordning till en vinnare utsetts. Detta upprepas tills det inte går "
+"att utse fler vinnare."
 
 #: voteit/irv/schemas.py:18
 msgid "Winners"
-msgstr ""
+msgstr "Vinnare"
 
 #. Default: Numbers of possible winners in the poll.
 #: voteit/irv/schemas.py:19
 msgid "repeated_irv_config_winners_description"
-msgstr ""
+msgstr "Antal möjliga vinnare i omröstningen."
 
 #: voteit/irv/schemas.py:25
 msgid "Minimum ranked candidates"
-msgstr ""
+msgstr "Minsta antal förslag att rangordna"
 
 #. Default: Minimum number of candidates to rank.
 #: voteit/irv/schemas.py:26
 msgid "repeated_irv_config_min_ranked_description"
-msgstr ""
+msgstr "Minsta antal förslag att rangordna."
 
 #: voteit/irv/schemas.py:83
 #, python-format
 msgid "You must vote for at least ${num} proposals."
-msgstr ""
+msgstr "Du måste rösta på minst ${num} förslag."
 
 #: voteit/irv/templates/result_repeated_irv.pt:5
 #: voteit/irv/templates/result_irv.pt:5
 msgid "Results of ${title}"
-msgstr ""
+msgstr "Resultat av ${title}"
 
 #. Default: Repeated IRV is designed to achieve a ranked non-proportional
 #. election result, where every poropsal is supported by a majority of the
@@ -68,69 +93,75 @@ msgstr ""
 #: voteit/irv/templates/result_repeated_irv.pt:12
 msgid "repeated_irv_result_explanation"
 msgstr ""
+"Upprepad IRV är utformad för att uppnå ett rangordnad valresultat, där varje "
+"förslag stöds av en majoritet av de röstande. Röster från uteslutna förslag "
+"förs över enligt de röstsedlarnas rangordning tills ett förslag har "
+"majoritet. Detta upprepas tills inga fler vinnare kan utses."
 
 #: voteit/irv/templates/result_repeated_irv.pt:24
 #: voteit/irv/templates/result_irv.pt:27
 msgid "Approved"
-msgstr ""
+msgstr "Bifallen"
 
 #: voteit/irv/templates/result_repeated_irv.pt:36
 #: voteit/irv/templates/result_irv.pt:42
 msgid "Denied"
-msgstr ""
+msgstr "Avslaget"
 
 #. Default: Randomization was used to resolve ties.
 #: voteit/irv/templates/result_repeated_irv.pt:48
 msgid "stv_tied_description"
-msgstr ""
+msgstr "Slumpmässig utslagsröst har använts."
 
 #. Default: Result is incomplete. Not enough proposals are supported by a
 #. majority.
 #: voteit/irv/templates/result_repeated_irv.pt:52
 msgid "stv_incomplete_description"
 msgstr ""
+"Resultatet är ofullständigt. Det finns inte tillräckligt många förslag som "
+"uppnått majoritet."
 
 #: voteit/irv/templates/result_repeated_irv.pt:63
 #: voteit/irv/templates/result_irv.pt:63
 msgid "Detailed result"
-msgstr ""
+msgstr "Detaljerat resultat"
 
 #: voteit/irv/templates/result_repeated_irv.pt:70
 msgid "Round"
-msgstr ""
+msgstr "Runda"
 
 #: voteit/irv/templates/result_repeated_irv.pt:71
 msgid "Result"
-msgstr ""
+msgstr "Resultat"
 
 #: voteit/irv/templates/result_repeated_irv.pt:72
 msgid "Method"
-msgstr ""
+msgstr "Metod"
 
 #: voteit/irv/templates/result_repeated_irv.pt:87
 #: voteit/irv/templates/result_irv.pt:70
 msgid "Complete result"
-msgstr ""
+msgstr "Komplett resultat"
 
 #: voteit/irv/templates/result_repeated_irv.pt:89
 #: voteit/irv/templates/result_repeated_irv.pt:96
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: voteit/irv/templates/result_repeated_irv.pt:90
 #: voteit/irv/templates/result_repeated_irv.pt:97
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
 #: voteit/irv/templates/result_repeated_irv.pt:94
 #: voteit/irv/templates/result_irv.pt:74
 msgid "Random in tiebreak"
-msgstr ""
+msgstr "Slumpmässig utslagsröst"
 
 #: voteit/irv/templates/result_repeated_irv.pt:101
 #: voteit/irv/templates/result_irv.pt:78
 msgid "Quota (votes to be elected)"
-msgstr ""
+msgstr "Kvot (röster för att bli vald)"
 
 #. Default: Instant-runoff voting ensures that the winning proposal has support
 #. from a majority of the voters. Proposals with the least amount of votes are
@@ -138,13 +169,18 @@ msgstr ""
 #: voteit/irv/templates/result_irv.pt:12
 msgid "irv_result_explanation"
 msgstr ""
+"IRV (Instant-runoff voting) säkerställer en vinnare med stöd från en "
+"majoritet av de röstande. Förslaget med minst antal röster utesluts tills "
+"att något förslag uppnått majoritet."
 
 #. Default: Randomization was used to resolve ties.
 #: voteit/irv/templates/result_irv.pt:48
 msgid "irv_tied_description"
-msgstr ""
+msgstr "Slumpmässig utslagsröst har använts."
 
 #. Default: Result is incomplete. No proposal is supported by a majority.
 #: voteit/irv/templates/result_irv.pt:52
 msgid "irv_incomplete_description"
 msgstr ""
+"Resultatet är ofullständigt. Inget förslag fick stöd av en majoritet av de "
+"röstande."
