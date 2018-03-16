@@ -1,4 +1,4 @@
-STV Polls for VoteIT
+IRV Polls for VoteIT
 ====================
 
 .. image:: https://travis-ci.org/VoteIT/voteit.irv.png?branch=master
