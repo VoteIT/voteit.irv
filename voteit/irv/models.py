@@ -2,14 +2,14 @@ from __future__ import unicode_literals
 
 from .poll import IRV
 from .poll import RepeatedIRV
-from voteit.stv.models import ScottishSTVPoll
+from voteit.stv.models import BaseSTVPoll
 
 from voteit.irv import _
 from voteit.irv.schemas import IRVPollSchema
 from voteit.irv.schemas import SettingsSchema
 
 
-class IRVPoll(ScottishSTVPoll):
+class IRVPoll(BaseSTVPoll):
     name = 'irv'
     title = _("Instant-runoff voting")
     description = _("moderator_description_irv",
@@ -23,6 +23,9 @@ class IRVPoll(ScottishSTVPoll):
     method = IRV
     template_name = 'voteit.irv:templates/result_irv.pt'
 
+    multiple_winners = False
+    priority = 2
+
     def get_vote_schema(self):
         return IRVPollSchema()
 
@@ -30,7 +33,7 @@ class IRVPoll(ScottishSTVPoll):
         pass
 
 
-class RepeatedIRVPoll(IRVPoll):
+class RepeatedIRVPoll(BaseSTVPoll):
     name = 'repeated_irv'
     title = _("Repeated IRV")
     description = _("moderator_description_repeated_irv",
@@ -42,6 +45,11 @@ class RepeatedIRVPoll(IRVPoll):
                                   "Winners is decided by majority, and repeats until all winners are selected.")
     method = RepeatedIRV
     template_name = 'voteit.irv:templates/result_repeated_irv.pt'
+
+    priority = 10
+
+    def get_vote_schema(self):
+        return IRVPollSchema()
 
     def get_settings_schema(self):
         return SettingsSchema()
