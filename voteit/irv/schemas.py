@@ -58,6 +58,7 @@ class IRVPollSchema(colander.Schema):
     )
     proposals = colander.SchemaNode(
         colander.List(),
+        title = _("Proposals"),
         widget=proposals_ordering_widget,
         validator=n_must_be_picked_validator,
     )

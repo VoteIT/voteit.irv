@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-20 17:31+0100\n"
-"PO-Revision-Date: 2018-03-16 15:58+0000\n"
+"POT-Creation-Date: 2018-03-20 17:34+0100\n"
+"PO-Revision-Date: 2018-03-20 17:34+0100\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Swedish <http://example.com/projects/voteit/voteit-irv/sv/>\n"
 "Language: sv\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.16\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #: voteit/irv/models.py:14
 msgid "Instant-runoff voting"
@@ -79,6 +79,10 @@ msgstr "Minsta antal förslag att rangordna."
 #, python-format
 msgid "You must vote for at least ${num} proposals."
 msgstr "Du måste rösta på minst ${num} förslag."
+
+#: voteit/irv/schemas.py:61
+msgid "Proposals"
+msgstr "Förslag"
 
 #: voteit/irv/templates/result_irv.pt:5
 #: voteit/irv/templates/result_repeated_irv.pt:5

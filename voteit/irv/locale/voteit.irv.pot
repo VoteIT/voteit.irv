@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE 1.0\n"
-"POT-Creation-Date: 2018-03-20 17:31+0100\n"
+"POT-Creation-Date: 2018-03-20 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,6 +71,10 @@ msgstr ""
 #: ./voteit/irv/schemas.py:48
 #, python-format
 msgid "You must vote for at least ${num} proposals."
+msgstr ""
+
+#: ./voteit/irv/schemas.py:61
+msgid "Proposals"
 msgstr ""
 
 #: ./voteit/irv/templates/result_irv.pt:5
