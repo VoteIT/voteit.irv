@@ -38,7 +38,5 @@ setup(name='voteit.irv',
       tests_require= requires,
       test_suite="voteit.irv",
       entry_points = """\
-      [fanstatic.libraries]
-      voteit_irv = voteit.irv.fanstatic_lib:library
       """,
       )
