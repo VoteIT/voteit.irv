@@ -4,8 +4,9 @@ from __future__ import unicode_literals
 from decimal import Decimal
 from math import ceil
 
-from stvpoll import ElectionRound, IncompleteResult, Candidate
-
+from stvpoll import Candidate
+from stvpoll import ElectionRound
+from stvpoll import IncompleteResult
 from stvpoll import STVPollBase
 
 
