@@ -11,6 +11,7 @@ requires = (
     'colander',
     'deform',
     'voteit.core',
+    'voteit.stv',
     'stvpoll',
     'typing',
     'js.jqueryui_touch_punch',
