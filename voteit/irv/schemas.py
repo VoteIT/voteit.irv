@@ -3,11 +3,10 @@ from __future__ import unicode_literals
 import colander
 import deform
 from pyramid.traversal import find_interface
+from voteit.stv.schemas import proposals_ordering_widget
+from voteit.core.models.interfaces import IPoll
 
 from voteit.irv import _
-from voteit.stv.schemas import proposals_ordering_widget
-
-from voteit.core.models.interfaces import IPoll
 
 
 class SettingsSchema(colander.Schema):
