@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-20 14:31+0200\n"
-"PO-Revision-Date: 2018-03-20 17:34+0100\n"
+"PO-Revision-Date: 2018-04-20 12:33+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Swedish <http://example.com/projects/voteit/voteit-irv/sv/>\n"
 "Language: sv\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Weblate 2.16\n"
 
 #: voteit/irv/models.py:14
 msgid "Instant-runoff voting"
@@ -76,16 +76,16 @@ msgid "repeated_irv_config_min_ranked_description"
 msgstr "Minsta antal förslag att rangordna."
 
 #: voteit/irv/schemas.py:31
-#, fuzzy
 msgid "Allow random in tiebreaks"
-msgstr "Slumpmässig utslagsröst"
+msgstr "Tillåt slumpmässig utslagsröst"
 
 #. Default: Tiebreaks are unusual in real polls. Disabling this can sometimes
 #. lead to an incomplete results.
 #: voteit/irv/schemas.py:32
-#, fuzzy
 msgid "irv_config_random_tiebreak_description"
-msgstr "Slumpmässig utslagsröst har använts."
+msgstr ""
+"Oavgjort är ovanligt i riktiga omröstningar. Att stänga av slumpmässig "
+"utslagsröst kan ibland leda till ett ofullständigt resultat."
 
 #: voteit/irv/schemas.py:56
 #, python-format
