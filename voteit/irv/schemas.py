@@ -26,6 +26,14 @@ class SettingsSchema(colander.Schema):
                       default="Minimum number of candidates to rank."),
         default=1,
     )
+    random_in_tiebreaks = colander.SchemaNode(
+        colander.Bool(),
+        title=_('Allow random in tiebreaks'),
+        description=_('irv_random_tiebreak_description',
+                      default='Tiebreaks are unusual in real polls. '
+                              'Disabling this can sometimes lead to an incomplete results.'),
+        default=True,
+    )
 
 
 @colander.deferred
