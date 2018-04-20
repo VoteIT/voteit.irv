@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE 1.0\n"
-"POT-Creation-Date: 2018-03-20 17:34+0100\n"
+"POT-Creation-Date: 2018-04-20 14:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,65 +68,28 @@ msgstr ""
 msgid "repeated_irv_config_min_ranked_description"
 msgstr ""
 
-#: ./voteit/irv/schemas.py:48
+#: ./voteit/irv/schemas.py:31
+msgid "Allow random in tiebreaks"
+msgstr ""
+
+#. Default: Tiebreaks are unusual in real polls. Disabling this can sometimes
+#. lead to an incomplete results.
+#: ./voteit/irv/schemas.py:32
+msgid "irv_random_tiebreak_description"
+msgstr ""
+
+#: ./voteit/irv/schemas.py:56
 #, python-format
 msgid "You must vote for at least ${num} proposals."
 msgstr ""
 
-#: ./voteit/irv/schemas.py:61
+#: ./voteit/irv/schemas.py:69
 msgid "Proposals"
 msgstr ""
 
-#: ./voteit/irv/templates/result_irv.pt:5
 #: ./voteit/irv/templates/result_repeated_irv.pt:5
+#: ./voteit/irv/templates/result_irv.pt:5
 msgid "Results of ${title}"
-msgstr ""
-
-#. Default: Instant-runoff voting ensures that the winning proposal has support
-#. from a majority of the voters. Proposals with the least amount of votes are
-#. excluded until one proposal has a majority.
-#: ./voteit/irv/templates/result_irv.pt:12
-msgid "irv_result_explanation"
-msgstr ""
-
-#: ./voteit/irv/templates/result_irv.pt:27
-#: ./voteit/irv/templates/result_repeated_irv.pt:24
-msgid "Approved"
-msgstr ""
-
-#: ./voteit/irv/templates/result_irv.pt:42
-#: ./voteit/irv/templates/result_repeated_irv.pt:36
-msgid "Denied"
-msgstr ""
-
-#. Default: Randomization was used to resolve ties.
-#: ./voteit/irv/templates/result_irv.pt:48
-msgid "irv_tied_description"
-msgstr ""
-
-#. Default: Result is incomplete. No proposal is supported by a majority.
-#: ./voteit/irv/templates/result_irv.pt:52
-msgid "irv_incomplete_description"
-msgstr ""
-
-#: ./voteit/irv/templates/result_irv.pt:63
-#: ./voteit/irv/templates/result_repeated_irv.pt:63
-msgid "Detailed result"
-msgstr ""
-
-#: ./voteit/irv/templates/result_irv.pt:70
-#: ./voteit/irv/templates/result_repeated_irv.pt:87
-msgid "Complete result"
-msgstr ""
-
-#: ./voteit/irv/templates/result_irv.pt:74
-#: ./voteit/irv/templates/result_repeated_irv.pt:94
-msgid "Random in tiebreak"
-msgstr ""
-
-#: ./voteit/irv/templates/result_irv.pt:78
-#: ./voteit/irv/templates/result_repeated_irv.pt:101
-msgid "Quota (votes to be elected)"
 msgstr ""
 
 #. Default: Repeated IRV is designed to achieve a ranked non-proportional
@@ -138,6 +101,16 @@ msgstr ""
 msgid "repeated_irv_result_explanation"
 msgstr ""
 
+#: ./voteit/irv/templates/result_repeated_irv.pt:24
+#: ./voteit/irv/templates/result_irv.pt:27
+msgid "Approved"
+msgstr ""
+
+#: ./voteit/irv/templates/result_repeated_irv.pt:36
+#: ./voteit/irv/templates/result_irv.pt:42
+msgid "Denied"
+msgstr ""
+
 #. Default: Randomization was used to resolve ties.
 #: ./voteit/irv/templates/result_repeated_irv.pt:48
 msgid "stv_tied_description"
@@ -147,6 +120,11 @@ msgstr ""
 #. majority.
 #: ./voteit/irv/templates/result_repeated_irv.pt:52
 msgid "stv_incomplete_description"
+msgstr ""
+
+#: ./voteit/irv/templates/result_repeated_irv.pt:63
+#: ./voteit/irv/templates/result_irv.pt:63
+msgid "Detailed result"
 msgstr ""
 
 #: ./voteit/irv/templates/result_repeated_irv.pt:70
@@ -161,6 +139,11 @@ msgstr ""
 msgid "Method"
 msgstr ""
 
+#: ./voteit/irv/templates/result_repeated_irv.pt:87
+#: ./voteit/irv/templates/result_irv.pt:70
+msgid "Complete result"
+msgstr ""
+
 #: ./voteit/irv/templates/result_repeated_irv.pt:89
 #: ./voteit/irv/templates/result_repeated_irv.pt:96
 msgid "Yes"
@@ -169,4 +152,31 @@ msgstr ""
 #: ./voteit/irv/templates/result_repeated_irv.pt:90
 #: ./voteit/irv/templates/result_repeated_irv.pt:97
 msgid "No"
+msgstr ""
+
+#: ./voteit/irv/templates/result_repeated_irv.pt:94
+#: ./voteit/irv/templates/result_irv.pt:74
+msgid "Random in tiebreak"
+msgstr ""
+
+#: ./voteit/irv/templates/result_repeated_irv.pt:101
+#: ./voteit/irv/templates/result_irv.pt:78
+msgid "Quota (votes to be elected)"
+msgstr ""
+
+#. Default: Instant-runoff voting ensures that the winning proposal has support
+#. from a majority of the voters. Proposals with the least amount of votes are
+#. excluded until one proposal has a majority.
+#: ./voteit/irv/templates/result_irv.pt:12
+msgid "irv_result_explanation"
+msgstr ""
+
+#. Default: Randomization was used to resolve ties.
+#: ./voteit/irv/templates/result_irv.pt:48
+msgid "irv_tied_description"
+msgstr ""
+
+#. Default: Result is incomplete. No proposal is supported by a majority.
+#: ./voteit/irv/templates/result_irv.pt:52
+msgid "irv_incomplete_description"
 msgstr ""
