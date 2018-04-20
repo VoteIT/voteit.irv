@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-20 14:25+0200\n"
+"POT-Creation-Date: 2018-04-20 14:31+0200\n"
 "PO-Revision-Date: 2018-03-20 17:34+0100\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Swedish <http://example.com/projects/voteit/voteit-irv/sv/>\n"
@@ -84,7 +84,7 @@ msgstr "Slumpmässig utslagsröst"
 #. lead to an incomplete results.
 #: voteit/irv/schemas.py:32
 #, fuzzy
-msgid "irv_random_tiebreak_description"
+msgid "irv_config_random_tiebreak_description"
 msgstr "Slumpmässig utslagsröst har använts."
 
 #: voteit/irv/schemas.py:56

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE 1.0\n"
-"POT-Creation-Date: 2018-04-20 14:25+0200\n"
+"POT-Creation-Date: 2018-04-20 14:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,7 +75,7 @@ msgstr ""
 #. Default: Tiebreaks are unusual in real polls. Disabling this can sometimes
 #. lead to an incomplete results.
 #: ./voteit/irv/schemas.py:32
-msgid "irv_random_tiebreak_description"
+msgid "irv_config_random_tiebreak_description"
 msgstr ""
 
 #: ./voteit/irv/schemas.py:56
