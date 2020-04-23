@@ -23,7 +23,7 @@ class IRVPoll(BaseSTVPoll):
     method = IRV
     template_name = 'voteit.irv:templates/result_irv.pt'
     multiple_winners = False
-    priority = 2
+    priority = 10
 
     def get_vote_schema(self):
         return IRVPollSchema()
@@ -44,7 +44,7 @@ class RepeatedIRVPoll(BaseSTVPoll):
                                   "Winners is decided by majority, and repeats until all winners are selected.")
     method = RepeatedIRV
     template_name = 'voteit.irv:templates/result_repeated_irv.pt'
-    priority = 10
+    priority = 20
 
     def get_vote_schema(self):
         return IRVPollSchema()
