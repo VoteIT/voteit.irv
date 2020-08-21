@@ -1,6 +1,5 @@
--e git+https://github.com/ArcheProject/Arche.git#egg=arche
--e git+https://github.com/ArcheProject/arche_usertags.git#egg=arche_usertags
--e git+https://github.com/VoteIT/voteit.core.git#egg=voteit.core
+-r https://raw.githubusercontent.com/VoteIT/voteit.core/master/requirements.txt
+-e git+https://github.com/VoteIT/voteit.core.git#egg=voteit.core[testing]
 -e git+https://github.com/VoteIT/voteit.stv.git#egg=voteit.stv
 -e .[testing]
 six>=1.12
